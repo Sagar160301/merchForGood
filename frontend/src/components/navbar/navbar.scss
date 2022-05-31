@@ -1,0 +1,29 @@
+@import "../../sass//variable.scss";
+@import "../../sass/mixin.scss";
+.nav {
+  height: auto;
+  width: 100%;
+  background-color: white;
+
+  .nav-name {
+    background-color: $bgColoryellow;
+    padding: 10px 0px;
+    font-size: $font;
+  }
+
+  .nav-itemDetails {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: $font;
+    padding: 5px 10px;
+
+    a {
+      @include anchor;
+    }
+
+    .nav-icon {
+      margin-bottom: -5px;
+    }
+  }
+}
