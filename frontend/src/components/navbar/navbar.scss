@@ -26,4 +26,15 @@
       margin-bottom: -5px;
     }
   }
+  .nav-logo {
+    margin-top: -30px;
+    img {
+      width: 26%;
+    }
+  }
+  .nav-link {
+    a {
+      @include anchor;
+    }
+  }
 }
