@@ -22,8 +22,8 @@ export const HomeCollection = () => {
           }
         })}
       </div>
-      <h2 onClick={goToCollection}>
-        SHOP COLLECTIONS NOW <ArrowForwardIosIcon className="icon" />
+      <h2 onClick={goToCollection} className={"icon"}>
+        SHOP COLLECTIONS NOW <ArrowForwardIosIcon />
       </h2>
     </div>
   );

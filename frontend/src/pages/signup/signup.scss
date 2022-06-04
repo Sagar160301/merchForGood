@@ -7,4 +7,7 @@
   .sign-up-name {
     @include grid(2, auto);
   }
+  .auth-button {
+    @include flex(flex-start, center, row);
+  }
 }

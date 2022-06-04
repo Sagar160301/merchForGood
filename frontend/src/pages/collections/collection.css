@@ -1,0 +1,14 @@
+.collection-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  -ms-grid-rows: (auto)[0];
+      grid-template-rows: repeat(0, auto);
+  grid-gap: 10px;
+}
+
+.collection-items img {
+  width: 100%;
+}
+/*# sourceMappingURL=collection.css.map */

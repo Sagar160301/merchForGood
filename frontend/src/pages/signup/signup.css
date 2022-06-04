@@ -1,0 +1,31 @@
+.sign-up-section {
+  width: 600px;
+  margin: 20px auto;
+}
+
+.sign-up-section .sign-up-name {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: (auto)[auto];
+      grid-template-rows: repeat(auto, auto);
+  grid-gap: 10px;
+}
+
+.sign-up-section .auth-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+/*# sourceMappingURL=signup.css.map */

@@ -4,10 +4,12 @@
 .button {
   @include flex(flex-start, center, row);
   div {
+    @include flex(center, center, row);
     background-color: $bgColoryellow;
     color: $colorBlack;
     padding: 10px 20px;
     border-radius: 4px;
+    margin: 2px;
   }
   a {
     margin-left: 15px;

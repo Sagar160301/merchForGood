@@ -1,11 +1,15 @@
 import "./button.scss";
-import { Link } from "react-router-dom";
 
-export const Button = ({ text, link, path }) => {
+export const Button = (props) => {
   return (
-    <div className="button">
-      <div>{text}</div>
-      <Link to={path ? path : "/"}>{link}</Link>
+    <div
+      className={`button ${props.className ? props.className : null}`}
+      onClick={props.onClick}
+    >
+      <div>
+        {props.string ? props.string : null}
+        {props.text}
+      </div>
     </div>
   );
 };

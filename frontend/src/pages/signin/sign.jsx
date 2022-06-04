@@ -1,5 +1,6 @@
 import { Button } from "../../components/button/button";
 import { Input } from "../../components/input/input";
+import { Link } from "react-router-dom";
 import "../signup/signup.scss";
 export const SignIn = () => {
   const handleChange = (e) => {
@@ -13,7 +14,10 @@ export const SignIn = () => {
         <Input onChange={handleChange} name={"Email"} type={"email"} />
         <Input onChange={handleChange} name={"Password"} type={"password"} />
       </form>
-      <Button text={"Sign Up"} link={"CREATE ACCOUNT"} path={"/signup"} />
+      <div className="auth-button">
+        <Button text={"Sign In"} path={"/signup"} />
+        <Link to={"/signup"}>CREATE ACCOUNT</Link>
+      </div>
     </div>
   );
 };

@@ -11,6 +11,7 @@ import { SignIn } from "./pages/signin/sign";
 function App() {
   const dispatch = useDispatch();
   dispatch(getData());
+
   return (
     <div className="App">
       <Navbar />
