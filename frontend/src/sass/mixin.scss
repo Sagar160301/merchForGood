@@ -3,5 +3,19 @@
   color: black;
   margin: 5px 10px;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 500;
+}
+
+@mixin flex($content, $items, $direction) {
+  display: flex;
+  justify-content: $content;
+  align-items: $items;
+  flex-direction: $direction;
+}
+
+@mixin grid($row, $col) {
+  display: grid;
+  grid-template-columns: repeat($row, auto);
+  grid-template-rows: repeat($col, auto);
+  grid-gap: 10px;
 }
