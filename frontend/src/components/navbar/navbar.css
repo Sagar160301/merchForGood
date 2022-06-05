@@ -1,0 +1,54 @@
+.nav {
+  height: auto;
+  width: 100%;
+  background-color: white;
+}
+
+.nav .nav-name {
+  background-color: #ffd650;
+  padding: 10px 0px;
+  font-size: 1rem;
+}
+
+.nav .nav-itemDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+.nav .nav-itemDetails a {
+  text-decoration: none;
+  color: black;
+  margin: 5px 10px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav .nav-itemDetails .nav-icon {
+  margin-bottom: -5px;
+}
+
+.nav .nav-logo {
+  margin-top: -30px;
+}
+
+.nav .nav-logo img {
+  width: 26%;
+}
+
+.nav .nav-link a {
+  text-decoration: none;
+  color: black;
+  margin: 5px 10px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+/*# sourceMappingURL=navbar.css.map */

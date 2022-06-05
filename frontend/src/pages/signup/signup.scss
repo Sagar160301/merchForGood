@@ -1,0 +1,13 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/variable.scss";
+.sign-up-section {
+  width: 600px;
+  margin: 20px auto;
+
+  .sign-up-name {
+    @include grid(2, auto);
+  }
+  .auth-button {
+    @include flex(flex-start, center, row);
+  }
+}

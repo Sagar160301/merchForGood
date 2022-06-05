@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,iBAAiB,CAAC;EEahB,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,eAAkB;EACzC,kBAAkB,EAAE,eAAkB;EACtC,QAAQ,EAAE,IAAI;CFPf;;AATD,AAGE,iBAHe,CAGf,GAAG,CAAC;EACF,KAAK,EAAE,IAAI;CACZ;;AALH,AAME,iBANe,CAMf,KAAK,CAAC;EEAN,OAAO,EAAE,IAAI;EACb,eAAe,EFAC,MAAM;EECtB,WAAW,EFDa,MAAM;EEE9B,cAAc,EFFkB,GAAG;CAClC",
+    "sources": [
+        "homeCollection.scss",
+        "../../sass/variable.scss",
+        "../../sass/mixin.scss"
+    ],
+    "names": [],
+    "file": "homeCollection.css"
+}

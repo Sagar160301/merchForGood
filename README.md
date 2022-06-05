@@ -1,1 +1,1 @@
-# merchForGod
+# merchForGood

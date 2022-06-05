@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,iBAAiB,CAAC;ECahB,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,eAAkB;EACzC,kBAAkB,EAAE,eAAkB;EACtC,QAAQ,EAAE,IAAI;CDTf;;AAPD,AAGE,iBAHe,CAGf,GAAG,CAAC;EACF,KAAK,EAAE,IAAI;CAEZ",
+    "sources": [
+        "collection.scss",
+        "../../sass/mixin.scss",
+        "../../sass/mixin.scss"
+    ],
+    "names": [],
+    "file": "collection.css"
+}

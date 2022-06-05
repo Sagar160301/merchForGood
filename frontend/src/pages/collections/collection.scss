@@ -1,0 +1,11 @@
+@import "../../sass//mixin.scss";
+@import "../../sass/mixin.scss";
+
+.collection-items {
+  @include grid(4, 0);
+
+  img {
+    width: 100%;
+    // width: 200px;
+  }
+}

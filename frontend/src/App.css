@@ -1,8 +1,15 @@
 .App {
   text-align: center;
   background-color: white;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
+h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -45,4 +52,6 @@ button {
 a {
   text-decoration: none;
   color: black;
+  margin-left: 10px;
+  letter-spacing: 2px;
 }
