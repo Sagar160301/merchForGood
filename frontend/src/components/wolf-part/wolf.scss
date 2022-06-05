@@ -1,0 +1,25 @@
+@import "../../sass/variable.scss";
+@import "../../sass/mixin.scss";
+
+.wolf {
+  width: 100%;
+  background-color: $bgColoryellow;
+  @include flex(flex-start, center, row);
+  box-sizing: border-box;
+  padding: 3% 2%;
+
+  .wolf-box {
+    background-color: white;
+    text-align: left;
+    width: 714px;
+    padding: 36px;
+    position: absolute;
+    right: 20px;
+
+    select {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0px;
+    }
+  }
+}

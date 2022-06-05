@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import AddIcon from "@mui/icons-material/Add";
 import { Button } from "../button/button";
+import "./wolf.scss";
 export const Wolf = () => {
   const data = useSelector((store) => store.dataReducer.data);
   const [size, setSize] = useState({ size: "S", color: "White" });
@@ -16,13 +17,15 @@ export const Wolf = () => {
         <p>{data[19].description}</p>
         <h2>£{data[19].price} GBP</h2>
         <select name="" className="wolf-select">
-          <option value="">Size-{size.size}</option>
+          <option value="">size</option>
           <option value="S">S</option>
           <option value="M">M</option>
           <option value="L">L</option>
         </select>
+        <br />
         <select name="" className="wolf-select">
           <option value="">Color-{size.color}</option>
+
           <option value="White">white</option>
         </select>
         <Button string={"ADD TO CART"} text={<AddIcon />} />

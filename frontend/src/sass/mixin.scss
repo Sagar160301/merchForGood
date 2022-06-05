@@ -19,3 +19,11 @@
   grid-template-rows: repeat($col, auto);
   grid-gap: 10px;
 }
+
+@mixin background($url) {
+  background-image: url($url);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // opacity: 0.9;
+}

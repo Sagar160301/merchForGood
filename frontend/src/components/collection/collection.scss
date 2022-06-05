@@ -1,0 +1,28 @@
+@import "../../sass/variable.scss";
+@import "../../sass/mixin.scss";
+
+.collection {
+  @include flex(space-around, center, row);
+  height: 400px;
+  padding: 20px;
+  color: white;
+
+  .collection-left {
+    height: 100%;
+    width: 100%;
+    @include background(
+      "https://cdn.shopify.com/s/files/1/1024/8221/files/www.merch_3_1400x.png?v=1643968483"
+    );
+    @include flex(center, center, row);
+  }
+
+  .collection-right {
+    height: 100%;
+    width: 100%;
+
+    @include background(
+      "https://cdn.shopify.com/s/files/1/1024/8221/products/625ea123858a07.18883356_820x.png?v=1651138009"
+    );
+    @include flex(center, center, row);
+  }
+}

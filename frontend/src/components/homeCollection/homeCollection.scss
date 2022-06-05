@@ -1,13 +1,15 @@
 @import "../../sass//variable.scss";
 @import "../../sass/mixin.scss";
 
-.collection-items {
-  @include grid(4, 0);
+.collectionHome {
+  .collectionHome-items {
+    @include grid(4, 0);
 
-  img {
-    width: 100%;
-  }
-  .icon {
-    @include flex(center, center, row);
+    img {
+      width: 100%;
+    }
+    .icon {
+      @include flex(center, center, row);
+    }
   }
 }

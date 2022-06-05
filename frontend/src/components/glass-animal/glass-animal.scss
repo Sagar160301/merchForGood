@@ -1,0 +1,33 @@
+@import "../../sass/variable.scss";
+@import "../../sass/mixin.scss";
+.glass-animal {
+  background-color: $bgColoryellow;
+  @include flex(flex-end, center, row);
+  box-sizing: border-box;
+  padding: 3% 1%;
+
+  .glass-animal-left {
+    background-color: white;
+    // width: 100%;
+    text-align: left;
+    width: 594px;
+    padding: 36px;
+    position: absolute;
+    left: 5%;
+    z-index: 1;
+    line-height: 33px;
+
+    .glass-animal-button {
+      position: absolute;
+      right: -1%;
+      bottom: 12px;
+    }
+  }
+
+  .glass-animal-right {
+    width: 60%;
+    img {
+      width: 100%;
+    }
+  }
+}
