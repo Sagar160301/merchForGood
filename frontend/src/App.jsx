@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Navbar } from "./components/navbar/navbar";
+import { Footer } from "./components/Footer/Footer";
 import { Collection } from "./pages/collections/collection";
 import { Home } from "./pages/home/home";
 import { useDispatch } from "react-redux";
@@ -15,6 +16,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Routes></Routes>
+      <Footer />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/collections" element={<Collection />}></Route>
