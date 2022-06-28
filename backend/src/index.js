@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 });
 // constrollers end route
 
-app.listen(5902, async () => {
+app.listen(8000, async () => {
   try {
     await connect();
     console.log("listening to the port number 5902");

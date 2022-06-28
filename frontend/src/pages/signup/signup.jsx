@@ -6,7 +6,7 @@ import { useState } from "react";
 import { auth } from "../../functions/authFuncton";
 import { addToken } from "../../redux/authToken/action";
 import { useDispatch } from "react-redux";
-import Cookies from "js-cookies";
+// import Cookies from "js-cookies";
 
 export const SignUp = () => {
   const [user, setUser] = useState({});
