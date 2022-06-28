@@ -1,0 +1,30 @@
+@import "../../sass/variable.scss";
+@import "../../sass/mixin.scss";
+
+.Product-middle {
+  width: 70%;
+  margin: 5% auto;
+  @include flex(space-between, flex-start, row);
+  .Product-middle-left {
+    width: 60%;
+    text-align: left;
+
+    p {
+      line-height: 1.8rem;
+      font-size: 0.95rem;
+    }
+
+    iframe {
+      width: 100%;
+    }
+  }
+  .Product-middle-right {
+    width: 35%;
+    border: 1px solid $grey;
+    padding: 10px;
+
+    select {
+      @include select();
+    }
+  }
+}

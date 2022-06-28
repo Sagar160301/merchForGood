@@ -33,8 +33,8 @@ export const Footer = () => {
       <div className="footer-container">
         <div>
           <h4>USEFUL INFO</h4>
-          {useful.map((e) => (
-            <div>
+          {useful.map((e, index) => (
+            <div key={index}>
               {
                 <Link style={{ color: "#555" }} to="">
                   {e}
@@ -42,11 +42,23 @@ export const Footer = () => {
               }
             </div>
           ))}
-          <div style={{ color: "#c8c2c2", fontSize: ".8rem", lineHeight:"0rem",marginTop:"3rem" }}>
+          <div
+            style={{
+              color: "#c8c2c2",
+              fontSize: ".8rem",
+              lineHeight: "0rem",
+              marginTop: "3rem",
+            }}
+          >
             <div>© 2022, Trekstock's Merch for Good</div>
-            <div  >
-              <a style={{ color: "#c8c2c2", fontSize: ".8rem" }} href="">Theme by Safe As Milk.</a>
-              <a style={{ color: "#c8c2c2", fontSize: ".8rem" }} href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">
+            <div>
+              <a style={{ color: "#c8c2c2", fontSize: ".8rem" }} href="">
+                Theme by Safe As Milk.
+              </a>
+              <a
+                style={{ color: "#c8c2c2", fontSize: ".8rem" }}
+                href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore"
+              >
                 Powered by Shopify
               </a>
             </div>
@@ -54,8 +66,8 @@ export const Footer = () => {
         </div>
         <div>
           <h4>GET IN TOUCH</h4>
-          {touch.map((e) => (
-            <div>
+          {touch.map((e, index) => (
+            <div key={index}>
               {
                 <Link style={{ color: "#555" }} to="">
                   {e}
@@ -66,8 +78,8 @@ export const Footer = () => {
         </div>
         <div>
           <h4>THANK YOU</h4>
-          {thanku.map((e) => (
-            <div>
+          {thanku.map((e, index) => (
+            <div key={index}>
               {
                 <Link style={{ color: "#555" }} to="">
                   {e}
@@ -103,9 +115,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="footer-pay">
-          <div>
-              
-          </div>
+        <div></div>
       </div>
     </div>
   );

@@ -1,0 +1,27 @@
+@import "../../sass/variable.scss";
+@import "../../sass/mixin.scss";
+
+.Bottom {
+  @include flex(center, center, column);
+  @include background(
+    "https://cdn.shopify.com/s/files/1/1024/8221/files/taking-back-sunday-768x512_1400x.jpg?v=1587835771"
+  );
+
+  margin: 3% 2%;
+  height: 50vh;
+
+  .content {
+    @include flex(center, center, column);
+    background-color: rgba(255, 255, 255, 0.649);
+    width: 100%;
+    height: 100%;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    font-weight: 300;
+
+    a {
+      font-size: $font;
+      font-weight: bold;
+    }
+  }
+}

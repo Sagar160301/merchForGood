@@ -1,0 +1,13 @@
+@import "../../sass/variable.scss";
+@import "../../sass/mixin.scss";
+
+.Video {
+  .Video-mainVideo {
+  }
+
+  .Video-image {
+    .border {
+      border: 5px solid $bgColoryellow;
+    }
+  }
+}

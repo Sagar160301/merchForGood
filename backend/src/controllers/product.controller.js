@@ -16,6 +16,7 @@ router.post("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
+    // console.log(req.params);
     let product = await Product.findById(req.params.id).lean().exec();
     return res.status(201).send(product);
   } catch (error) {

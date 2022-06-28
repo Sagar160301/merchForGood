@@ -13,7 +13,7 @@ export const GlassAnimal = () => {
           huge win." Dave Bayley, Glass Animals{" "}
         </p>
         <Button
-          text={"BUY THE TEE"}
+          text={"BUY THE T-SHIRT"}
           onClick={() => {}}
           className={"glass-animal-button"}
         />

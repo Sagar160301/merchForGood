@@ -1,0 +1,16 @@
+@import "../../sass/variable.scss";
+@import "../../sass/mixin.scss";
+
+.quantity-counter {
+  @include flex(space-between, center, row);
+  padding: 5px;
+
+  span {
+    border: 1px solid $grey;
+    padding: 0.5rem 1rem;
+
+    &:nth-child(2) {
+      background-color: $grey;
+    }
+  }
+}

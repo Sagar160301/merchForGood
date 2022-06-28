@@ -1,0 +1,20 @@
+@import "../../sass/variable.scss";
+@import "../../sass/mixin.scss";
+
+.Product-top {
+  .Product-top-main {
+  }
+
+  .Product-top-child {
+    @include flex(center, center, row);
+    margin: 2%;
+
+    img {
+      width: 5%;
+      margin: 5px;
+    }
+    .border {
+      border: 5px solid $bgColoryellow;
+    }
+  }
+}

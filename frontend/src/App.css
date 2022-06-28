@@ -5,11 +5,6 @@
   font-family: "Roboto", sans-serif;
 }
 
-h2 {
-  font-weight: 500;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -49,9 +44,26 @@ button {
   font-size: calc(10px + 2vmin);
 }
 
+/* my global css */
 a {
   text-decoration: none;
   color: black;
   margin-left: 10px;
   letter-spacing: 2px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+.yellow-border {
+  background-color: #ffd650;
+  width: 50px;
+  height: 5px;
+  margin: 20px auto;
+}
+
+.font-weight-three {
+  font-weight: 300;
 }

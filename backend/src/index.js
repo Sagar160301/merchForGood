@@ -8,19 +8,21 @@ app.use(express.json());
 app.use(cors());
 // all contorllers start here
 const ProductController = require("./controllers/product.controller");
+const userController = require("./controllers/user.controller");
 //all controllers end here
 
-// controllers route
+// controllers start route
 app.use("/products", ProductController);
+app.use("/users", userController);
 app.get("/", (req, res) => {
   res.send("hello");
 });
-// constrollers route
+// constrollers end route
 
-app.listen(5901, async () => {
+app.listen(5902, async () => {
   try {
     await connect();
-    console.log("listening to the port number 5901");
+    console.log("listening to the port number 5902");
   } catch (error) {
     console.log(error);
   }

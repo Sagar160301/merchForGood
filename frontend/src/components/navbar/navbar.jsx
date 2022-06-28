@@ -21,7 +21,7 @@ export const Navbar = () => {
         <img src={Logo} alt="" />
       </div>
       <div className="nav-link">
-        <Link to={""}>BAND T-SHIRTS</Link>
+        <Link to={"/collections"}>BAND T-SHIRTS</Link>
         <Link to={""}>ABOUT US</Link>
         <Link to={""}>THE ARTISTS</Link>
         <Link to={""}>WORLD CANCER DAY</Link>

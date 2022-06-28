@@ -9,7 +9,7 @@ export const addData = (data) => {
 
 export const getData = () => async (dispatch) => {
   try {
-    let res = await fetch("http://localhost:5901/products");
+    let res = await fetch("http://localhost:5902/products");
     let data = await res.json();
     dispatch(addData(data));
   } catch (error) {

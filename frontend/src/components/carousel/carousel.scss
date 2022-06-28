@@ -3,11 +3,30 @@
 
 .carousel {
   margin: 20px auto;
+  overflow-x: hidden;
   img {
     width: 95%;
     margin: auto;
     height: 80vh;
   }
+  .animation {
+    animation: scale 2s ease;
+    // transform: translateX(-100%);
+  }
+  .none {
+    display: none;
+  }
+  @keyframes scale {
+    0% {
+      transform: scale(0.8);
+    }
+    50% {
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
   .carousel-button {
     @include flex(center, center, row);
     position: absolute;

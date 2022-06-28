@@ -7,13 +7,14 @@ import { useSelector } from "react-redux";
 
 export const Carousel = () => {
   const data = useSelector((store) => store.dataReducer.data);
+  // console.log(data, "data");
   const [image, setImage] = useState([
-    "https://cdn.shopify.com/s/files/1/1024/8221/files/Sporty_Shopify_Banner_1400x.png?v=1652113230",
+    "https://cdn.shopify.com/s/files/1/1024/8221/files/Shopify_Banner_Chemical_Brothers_1400x.png?v=1654700092",
     "https://cdn.shopify.com/s/files/1/1024/8221/files/133867_widescreen_1400x.jpg?v=1626951085",
     "https://cdn.shopify.com/s/files/1/1024/8221/files/www.merch_3_1400x.png?v=1643968483",
     "https://cdn.shopify.com/s/files/1/1024/8221/files/48220601_2207669619292256_8038220599442538496_o_1400x.jpg?v=1587818635",
   ]);
-  const [index, setIndex] = useState(0);
+  const [ind, setIndex] = useState(0);
 
   const intervalRef = useRef();
   useEffect(() => {
@@ -26,7 +27,7 @@ export const Carousel = () => {
     () => {
       clearInterval(interval);
     };
-  }, [index]);
+  }, [ind]);
   const handleClick = (value) => {
     setIndex((pre) => {
       if (pre == 3 && value == 1) {
@@ -39,7 +40,14 @@ export const Carousel = () => {
   };
   return (
     <div className="carousel">
-      <img src={image[index]} alt="" />
+      {/* <img src={image[ind]} alt="" /> */}
+      {/* <img src={image[ind]} className="animation" alt="" /> */}
+      {image.map((el, index) => {
+        return index === ind ? (
+          <img src={el} key={index} className="animation" />
+        ) : null;
+      })}
+
       <div className="carousel-button">
         <Button
           onClick={() => {
@@ -56,9 +64,14 @@ export const Carousel = () => {
           text={<ArrowForwardIosIcon />}
         />
       </div>
-      <div className="carousel-card">
-        <h2>{data[index].name} - IN STOCK NOW</h2>
-        <p>{data[index].para3}</p>
+      <div className="carousel-card animation">
+        {data.length === 0 ? null : (
+          <>
+            <h2>{data[ind].name} - IN STOCK NOW</h2>
+            <div className="yellow-border"></div>
+            <p>{data[ind].para3}</p>
+          </>
+        )}
 
         <Button
           className={"carousel-card-button"}

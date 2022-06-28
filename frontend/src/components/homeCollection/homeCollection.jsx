@@ -15,6 +15,7 @@ export const HomeCollection = () => {
   return (
     <div className="collectionHome">
       <h2>EXCLUSIVE 2022 COLLECTION</h2>
+      <div className="yellow-border"></div>
       <div className="collectionHome-items">
         {data.length === 0
           ? null
