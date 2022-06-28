@@ -6,6 +6,9 @@
   "scripts": {
     "server": "nodemon src/index.js"
   },
+  "engines": {
+    "node": "16.14.0"
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
