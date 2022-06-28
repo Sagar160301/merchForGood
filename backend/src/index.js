@@ -2,6 +2,7 @@ const express = require("express");
 
 const connect = require("./config/db");
 const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 app.use(express.json());
@@ -19,10 +20,18 @@ app.get("/", (req, res) => {
 });
 // constrollers end route
 
-app.listen(8000, async () => {
+// port
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);
+// port
+
+app.listen(port, async () => {
   try {
     await connect();
-    console.log("listening to the port number 5902");
+    console.log("listening to the port number", port);
   } catch (error) {
     console.log(error);
   }
