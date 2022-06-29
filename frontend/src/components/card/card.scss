@@ -1,2 +1,16 @@
 @import "../../sass//variable.scss";
 @import "../../sass/mixin.scss";
+
+#card-image {
+  width: 360px;
+}
+.item-name {
+  margin: 10px 0px;
+  font-weight: 450;
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+}
+
+.item-price {
+  margin: 10px 0px;
+}

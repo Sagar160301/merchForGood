@@ -35,15 +35,20 @@ export const ProductMiddle = ({ data }) => {
         <iframe src={data.video} height="380"></iframe>
       </div>
       <div className="Product-middle-right">
-        <select name="">
-          <option value="">size</option>
-          <option value="S">S</option>
-          <option value="M">M</option>
-          <option value="L">L</option>
-        </select>
-        <br />
-        <Counter count={quantity} changeQuantity={changeQuantity} />
-        <Button string={"ADD TO CART"} text={<AddIcon />} />
+        <div className={"Product-middle-right-price"}>
+          <h2>£24.99 GBP</h2>
+        </div>
+        <div className="Product-middle-right-bottom">
+          <select name="">
+            <option value="">size</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <br />
+          <Counter count={quantity} changeQuantity={changeQuantity} />
+          <Button string={"ADD TO CART"} text={<AddIcon />} />
+        </div>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ export const Navbar = () => {
       </div>
       <div className="nav-link">
         <Link to={"/collections"}>BAND T-SHIRTS</Link>
-        <Link to={""}>ABOUT US</Link>
+        <Link to={"/aboutUs"}>ABOUT US</Link>
         <Link to={""}>THE ARTISTS</Link>
         <Link to={""}>WORLD CANCER DAY</Link>
         <Link to={""}>PRESS</Link>

@@ -4,6 +4,7 @@
 .Product-middle {
   width: 70%;
   margin: 5% auto;
+  box-sizing: border-box;
   @include flex(space-between, flex-start, row);
   .Product-middle-left {
     width: 60%;
@@ -21,8 +22,20 @@
   .Product-middle-right {
     width: 35%;
     border: 1px solid $grey;
-    padding: 10px;
 
+    .Product-middle-right-price {
+      text-align: left;
+      background-color: #d2cfcf45;
+      width: 100%;
+      margin-top: -20px;
+
+      h2 {
+        padding: 13px 2px;
+      }
+    }
+    .Product-middle-right-bottom {
+      padding: 5px 10px;
+    }
     select {
       @include select();
     }

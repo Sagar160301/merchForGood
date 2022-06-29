@@ -1,14 +1,15 @@
 import { Button } from "../../components/button/button";
 import { Input } from "../../components/input/input";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../signup/signup.scss";
 import { auth } from "../../functions/authFuncton";
 import { useState } from "react";
-import { addToken } from "../../redux/authToken/action";
-import { useDispatch } from "react-redux";
+import cookie from "react-cookies";
+
 export const SignIn = () => {
   const [user, setUser] = useState({});
-  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
@@ -28,7 +29,9 @@ export const SignIn = () => {
             try {
               if (user.Email && user.Password) {
                 let token = auth("/signin", user);
-                dispatch(addToken(token));
+                cookie.save("token", token);
+
+                navigate("/");
               } else {
                 alert("please enter email and password");
               }

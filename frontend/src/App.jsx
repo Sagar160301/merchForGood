@@ -11,6 +11,7 @@ import { SignUp } from "./pages/signup/signup";
 import { SignIn } from "./pages/signin/sign";
 import { useEffect, useState } from "react";
 import { Product } from "./pages/product/product";
+import { AboutUs } from "./pages/aboutUs/AboutUs";
 
 function App() {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ function App() {
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/signin" element={<SignIn />}></Route>
         <Route path="/product/:id" element={<Product />}></Route>
+        <Route path="/aboutUs" element={<AboutUs />}></Route>
       </Routes>
       <Footer />
     </div>

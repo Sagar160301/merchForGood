@@ -21,13 +21,14 @@ app.get("/", (req, res) => {
 // constrollers end route
 
 // port
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 8000;
-}
+// let port = process.env.PORT;
+// if (port == null || port == "") {
+//   port = 8000;
+// }
 
 // port
 
+let port = 5902;
 app.listen(port, async () => {
   try {
     await connect();

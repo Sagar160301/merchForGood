@@ -1,16 +1,16 @@
 import { Button } from "../../components/button/button";
 import { Input } from "../../components/input/input";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./signup.scss";
 import { useState } from "react";
 import { auth } from "../../functions/authFuncton";
-import { addToken } from "../../redux/authToken/action";
-import { useDispatch } from "react-redux";
-// import Cookies from "js-cookies";
+
+import cookie from "react-cookies";
 
 export const SignUp = () => {
   const [user, setUser] = useState({});
-  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
@@ -37,10 +37,11 @@ export const SignUp = () => {
                 user.FirstName &&
                 user.LastName
               ) {
-                // console.log(user);
                 let token = await auth("/signup", user);
-                Cookies.set("token", token);
-                dispatch(addToken(token));
+
+                cookie.save("token", token);
+
+                navigate("/");
               } else {
                 alert("please fill the details");
               }
