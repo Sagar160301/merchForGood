@@ -1,2 +1,18 @@
 @import "../../sass/variable.scss";
 @import "../../sass/mixin.scss";
+
+.AboutUs {
+  width: 700px;
+  margin: 50px auto;
+  font-weight: 300;
+  line-height: 2.5rem;
+  text-align: left;
+
+  h2 {
+    text-align: center;
+  }
+
+  h4 {
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,65 @@
+@import "../../sass/variable.scss";
+@import "../../sass/mixin.scss";
+
+.searchBox-background {
+  background-color: rgba(4, 3, 3, 0.72);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: 15;
+
+  .searchBox-main {
+    background-color: white;
+    position: absolute;
+    width: 40%;
+    top: 30vh;
+    left: 30vw;
+  }
+  h2 {
+    background-color: #e4e4e496;
+    margin-top: 0px;
+    padding: 7px 0px;
+  }
+
+  .searchBox-searchBar {
+    @include flexProperties(center, center);
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid rgb(191, 187, 187);
+
+    input {
+      width: 95%;
+      border: none;
+      outline: none;
+      font-size: 1.2rem;
+    }
+  }
+
+  .searchBox-searchLink {
+    width: 94%;
+    margin: 43px auto;
+    color: rgb(191, 187, 187);
+
+    div {
+      @include flexProperties(flex-start, center);
+      margin-right: 10px;
+
+      div {
+        @include flex(space-between, flex-start, column);
+
+        a {
+          margin: 5px 0px;
+        }
+      }
+    }
+  }
+  .position {
+    position: absolute;
+    right: 8px;
+    top: 9px;
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./AboutUs.scss";
 
 export const AboutUs = () => {
   return (
@@ -36,8 +37,8 @@ export const AboutUs = () => {
       </h4>
 
       <iframe
-        width="80%"
-        height="600vh"
+        width="100%"
+        height="400vh"
         src="https://www.youtube.com/embed/KqsOp5U5Ob0"
         title="YouTube video player"
         frameborder="0"
@@ -49,10 +50,10 @@ export const AboutUs = () => {
         say hello or find out more, just give us a shout. We're always happy to
         chat - hello@trekstock.com.
       </p>
-      <h6>
+      <h4>
         For more info on how we can support you or a loved one, or to get
         involved with Trekstock, check out www.trekstock.com.
-      </h6>
+      </h4>
       <img
         src="https://cdn.shopify.com/s/files/1/1024/8221/files/TREKSTOCK_RGB_TC1_HIGH_240x240.png?v=1643839783"
         alt=""

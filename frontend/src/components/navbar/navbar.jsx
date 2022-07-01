@@ -5,7 +5,7 @@ import Logo from "../../public/main_logo.webp";
 import { getData } from "../../redux/data/action";
 import { useDispatch } from "react-redux";
 
-export const Navbar = () => {
+export const Navbar = ({ search }) => {
   const dispatch = useDispatch();
   dispatch(getData());
   return (
@@ -15,7 +15,12 @@ export const Navbar = () => {
       <div className="nav-itemDetails">
         <Link to={"/signin"}>LOG IN</Link>
         <Link to={"/"}>CART()</Link>
-        <SearchIcon className="nav-icon" />
+        <SearchIcon
+          className="nav-icon"
+          onClick={() => {
+            search(true);
+          }}
+        />
       </div>
       <div className="nav-logo">
         <img src={Logo} alt="" />
