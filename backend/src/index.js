@@ -10,9 +10,11 @@ app.use(cors());
 // all contorllers start here
 const ProductController = require("./controllers/product.controller");
 const userController = require("./controllers/user.controller");
+const cartController = require("./controllers/cart.controllers");
 //all controllers end here
 
 // controllers start route
+app.use("/cartProduct", cartController);
 app.use("/products", ProductController);
 app.use("/users", userController);
 app.get("/", (req, res) => {

@@ -9,9 +9,8 @@ export const Counter = ({ count, changeQuantity }) => {
       <p>Quantity</p>
       <p>
         <span
-          disabled={count == 1 ? true : false}
           onClick={() => {
-            changeQuantity(count - 1);
+            count > 1 ? changeQuantity(count - 1) : null;
           }}
         >
           <MinimizeIcon />
@@ -22,7 +21,7 @@ export const Counter = ({ count, changeQuantity }) => {
             changeQuantity(count + 1);
           }}
         >
-          <AddIcon />
+          <AddIcon className="counter-margin" />
         </span>
       </p>
     </div>
