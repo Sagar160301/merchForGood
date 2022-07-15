@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ProductMiddle } from "../../components/product-middle/product-middle";
 
-export const Product = () => {
+export const Product = ({ cartProduct }) => {
   useEffect(() => {
     getSingleData();
   }, []);
@@ -24,7 +24,7 @@ export const Product = () => {
       <h2>{data.name} T-SHIRT</h2>
       <div className="yellow-border"></div>
       <ProductTop data={data} />
-      <ProductMiddle data={data} />
+      <ProductMiddle data={data} cartProduct={cartProduct} />
     </>
   );
 };

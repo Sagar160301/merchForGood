@@ -8,12 +8,14 @@ export const auth = async (path, user) => {
 
       body: JSON.stringify(user),
     });
-    // console.log(res);
     let data = await res.json();
+
     if (data.status == "success") {
       return data.token;
+    } else {
+      alert("please enter valid details");
+      return false;
     }
-    alert("please enter valid details");
     // console.log(data, "data");
   } catch (error) {
     alert(error);

@@ -6,11 +6,14 @@ const authMiddleware = require("../middlewares/auth.middleware");
 
 router.post("/", authMiddleware, async (req, res) => {
   try {
+    req.body.userId = req.userId;
+    console.log(req.body);
     let userCart = await Cart.findOne({
       userId: req.body.userId,
     });
 
     if (!userCart) {
+      // console.log(req.body, "body");
       userCart = await Cart.create(req.body);
     } else {
       let checkProductExistence = await Cart.findOne({
@@ -42,8 +45,10 @@ router.post("/", authMiddleware, async (req, res) => {
     return res.status(201).send({ status: "success" });
   } catch (error) {}
 });
-router.get("", async (req, res) => {
+router.get("/", authMiddleware, async (req, res) => {
   try {
+    let userCartProducts = await Cart.findOne({ userId: req.userId });
+    return res.status(201).send(userCartProducts);
   } catch (error) {
     return res.status(404).send({ message: error.message });
   }

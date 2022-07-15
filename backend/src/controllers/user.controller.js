@@ -48,7 +48,7 @@ router.post("/signin", async (req, res) => {
     let token = generateToken(user);
     return res.status(201).send({
       token,
-      status: "Succss",
+      status: "success",
     });
   } catch (error) {
     return res.status(404).send({ message: error.message });

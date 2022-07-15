@@ -6,7 +6,7 @@ import "./card.scss";
 export const Card = ({ data }) => {
   const navigate = useNavigate();
   useEffect(() => {
-    AOS.init({ duration: 1500 });
+    AOS.init({ duration: 2500 });
   }, []);
   return (
     <div

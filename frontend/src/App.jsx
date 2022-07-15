@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-// import { useCallback } from "react";
 import "./App.css";
 import { Navbar } from "./components/navbar/navbar";
 import { Footer } from "./components/Footer/Footer";
@@ -14,6 +13,8 @@ import { useCallback, useEffect, useState } from "react";
 import { Product } from "./pages/product/product";
 import { AboutUs } from "./pages/aboutUs/AboutUs";
 import { SearchBox } from "./components/searchBox/SearchBox";
+import cookie from "react-cookies";
+import { addCartData } from "./redux/cart/action";
 
 function App() {
   const dispatch = useDispatch();
@@ -27,9 +28,29 @@ function App() {
     [search]
   );
 
+  const cartProduct = useCallback(async () => {
+    try {
+      let token = cookie.load("token");
+      if (token == undefined) {
+        token = "abc";
+      }
+      let res = await fetch("http://localhost:5902/cartProduct", {
+        method: "GET",
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      let data = await res.json();
+      console.log(data, "data");
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
   useEffect(() => {
     dispatch(getData());
     setData(!data);
+    // cartProduct();
   }, []);
 
   return (
@@ -38,9 +59,18 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/collections" element={<Collection />}></Route>
-        <Route path="/signup" element={<SignUp />}></Route>
-        <Route path="/signin" element={<SignIn />}></Route>
-        <Route path="/product/:id" element={<Product />}></Route>
+        <Route
+          path="/signup"
+          element={<SignUp cartProduct={cartProduct} />}
+        ></Route>
+        <Route
+          path="/signin"
+          element={<SignIn cartProduct={cartProduct} />}
+        ></Route>
+        <Route
+          path="/product/:id"
+          element={<Product cartProduct={cartProduct} />}
+        ></Route>
         <Route path="/aboutUs" element={<AboutUs />}></Route>
       </Routes>
       <Footer />

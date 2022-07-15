@@ -4,10 +4,13 @@ import { useState } from "react";
 import { Button } from "../button/button";
 import { useCallback } from "react";
 import { Counter } from "../quantityCounter/Counter";
-export const ProductMiddle = ({ data }) => {
+import cookie from "react-cookies";
+import { useNavigate } from "react-router-dom";
+
+export const ProductMiddle = ({ data, cartProduct }) => {
   const [size, setSize] = useState({ size: "S", color: "White" });
   const [quantity, setQuantity] = useState(1);
-  // console.log(data);
+  const navigate = useNavigate();
 
   const changeQuantity = useCallback(
     (value) => {
@@ -15,6 +18,38 @@ export const ProductMiddle = ({ data }) => {
     },
     [quantity]
   );
+
+  const addDataToCart = async () => {
+    // console.log(data);
+    let payload = {
+      cartProducts: [
+        {
+          productId: "6298ec498ca969285dd04e6b",
+          count: 2,
+        },
+      ],
+    };
+
+    let token = cookie.load("token");
+    console.log(payload);
+    try {
+      let res = await fetch("http://localhost:5902/cartProduct", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(payload),
+      });
+      let data = await res.json();
+      if (data.status === "failed") {
+        return navigate("/signin");
+      }
+      console.log(data);
+      // return cartProduct();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="Product-middle">
       <div className="Product-middle-left">
@@ -47,7 +82,11 @@ export const ProductMiddle = ({ data }) => {
           </select>
           <br />
           <Counter count={quantity} changeQuantity={changeQuantity} />
-          <Button string={"ADD TO CART"} text={<AddIcon />} />
+          <Button
+            string={"ADD TO CART"}
+            onClick={addDataToCart}
+            text={<AddIcon />}
+          />
         </div>
       </div>
     </div>

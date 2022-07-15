@@ -6,7 +6,7 @@ import { auth } from "../../functions/authFuncton";
 import { useState } from "react";
 import cookie from "react-cookies";
 
-export const SignIn = () => {
+export const SignIn = ({ cartProduct }) => {
   const [user, setUser] = useState({});
   const navigate = useNavigate();
 
@@ -28,10 +28,13 @@ export const SignIn = () => {
           onClick={async () => {
             try {
               if (user.Email && user.Password) {
-                let token = auth("/signin", user);
-                cookie.save("token", token);
+                let token = await auth("/signin", user);
 
-                navigate("/");
+                if (token) {
+                  cookie.save("token", token);
+
+                  navigate("/");
+                }
               } else {
                 alert("please enter email and password");
               }
